@@ -10,7 +10,6 @@ function hacerAnim(anim)
    function cogerNPC()
     local jugadorCoord = GetEntityCoords(PlayerPedId())
     local handle, ped = FindFirstPed()
-    local np_carryped = GetCurrentResourceName()
     local rped = nil
     local distancieDe
     repeat
@@ -38,7 +37,7 @@ function hacerAnim(anim)
    end
 
    RegisterCommand('carryped', function()
-	TriggerEvent(''..GetCurrentResourceName()..':EventoPed')
+	TriggerEvent('np_carryped:EventoPed')
     end)
 
 
